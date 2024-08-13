@@ -48,6 +48,11 @@
     background: #e9f3ff;
 }
 
+.info-icon {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 767px) {
     .searchcontainer #searchInput {
         padding: 8px;
