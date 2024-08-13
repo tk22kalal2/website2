@@ -1,0 +1,620 @@
+        	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Button Example</title>
+	<style>
+    	/* Add some basic styling to the buttons */
+    	button {
+        	display: block;
+        	font-family: "Roboto", sans-serif;
+        	font-weight: 400;
+        	width: 100%;
+        	padding: 10px 22px;
+        	text-align: center;
+        	text-docoration: none;
+        	text-transform: uppercase;
+        	color: #fff;
+        	border-radius: 5px;
+        	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        	font-size: 18px;
+        	cursor: pointer;
+        	background-color: #2196F3;
+        	margin-bottom: 10px;        	
+	}
+
+    	body {
+        	margin: 20px; /* You can adjust the value to set the desired margin size */
+    	}
+        	
+    	/* Hide the additional buttons and collapsible text by default */
+    	.additional-buttons1,
+    	.additional-buttons2 {
+        	display: none;
+        	margin-top: 20px;
+    	}
+
+    	.main-buttons {
+        	margin-top: 20px;
+    	}
+
+    	.collapsible-text {
+        	display: none;
+        	margin-top: 10px;
+    	}	
+
+    	/* Style for the back button */
+    	.back-button {
+        	background-color: #4CAF50;
+    	}
+
+    	header {
+        	display: flex;
+        	align-items: center;
+        	justify-content: space-between;
+        	padding: 10px;
+        	background-color: #add8e6; /* Light blue background color */
+    	}
+
+    	footer {
+        	text-align: center;
+        	padding: 10px;
+    	}
+    	* {
+        	/* Change your font family */
+        	font-family: sans-serif;
+    	}
+    	.content-table {
+        	border-collapse: collapse;
+        	margin: 25px 0;
+        	font-size: 0.9em;
+        	min-width: 400px;
+        	border-radius: 5px 5px 0 0;
+        	overflow: hidden;
+        	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    	}
+    	.content-table thead tr {
+        	background-color: #009879;
+        	color: #ffffff;
+        	text-align: left;
+        	font-weight: bold;
+    	}
+    	.content-table th,
+    	.content-table td {
+        	padding: 12px 15px;
+    	}
+    	.content-table tbody tr {
+        	border-bottom: 1px solid #dddddd;
+    	}
+    	.content-table tbody tr:nth-of-type(even) {
+        	background-color: #f3f3f3;
+    	}
+    	.content-table tbody tr:last-of-type {
+        	border-bottom: 2px solid #009879;
+    	}
+    	.content-table tbody tr.active-row {
+        	font-weight: bold;
+        	color: #009879;
+    	}
+	form {
+	    padding: 10px;
+	    max-width: 400px;
+	    margin: 0 auto;
+	}
+	
+	label {
+	    font-size: 16px;
+	    margin-bottom: 5px;
+	}
+	
+	#searchInput {
+	    padding: 8px;
+	    border: 1px solid #ccc;
+	    border-radius: 5px;
+	    width: 100%;
+	    margin-top: 10px;
+	    font-size: 14px;
+	    height: 30px;
+	}
+	
+	#searchInput:focus {
+	    outline: none;
+	    border-color: #1E90FF;
+	    box-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
+	}
+	
+	body {
+	    margin: 20px;
+	    text-align: center;
+	}
+	
+	#suggestionList {
+	    list-style: none;
+	    padding: 0;
+	    margin: 0;
+	    position: absolute;
+	    background-color: #fff;
+	    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+	    z-index: 1;
+	    max-height: 300px;
+	    overflow-y: auto;
+	    margin-top: 5px;
+	    width: 100%; /* Set the width to 100% */
+	}
+	
+	#suggestionList li {
+	    padding: 8px;
+	    cursor: pointer;
+	    font-size: 16px;
+	}
+
+
+   	/* Style for the search bar */
+   	#input-box {
+        	padding: 8px;
+        	border: 1px solid #ccc;
+        	border-radius: 5px;
+        	width: 200px;
+        	margin-top: 10px;
+        	font-size: 14px;
+   	}
+
+   	/* Style for the search bar on focus */
+   	#input-box:focus {
+        	outline: none;
+        	border-color: #1E90FF; /* Change to your preferred focus color */
+        	box-shadow: 0 0 5px rgba(30, 144, 255, 0.5); /* Change to your preferred box-shadow */
+   	}
+   	body {
+        	margin: 20px;
+        	text-align: center; /* Center the content horizontally */
+   	}
+
+   	
+	</style>
+</head>
+<body>
+
+ 	<form>
+    	<label for="searchInput">Search:</label>
+    	<div style="position: relative;">
+        	<input type="text" id="searchInput" placeholder="Enter your search term..." oninput="getSuggestions()">
+        	<ul id="suggestionList"></ul>
+    	</div>
+	</form>
+
+	<header>
+    	<img src="https://i.postimg.cc/FRFC4qrB/IMG-20240110-192854-828.jpg" alt="Header Image" style="height: 150px;">
+	</header>
+        <div>
+                <button type="button" <a href="P.html">PREPLADDER</button>
+                <button type="button">MARROW</button>
+                <button type="button">DAMS</button>          
+            </div>
+  	
+	<input type="text" id="input-box" placeholder="Search anything" autocomplete="off">
+	
+	<div class="main-buttons">
+    	<!-- The main button - PREPLADDER -->
+    	<button id="prepladderButton" onclick="showPrepladderButtons()">PREPLADDER</button>
+
+
+    	<!-- The main button - MARROW -->
+    	<button id="marrowButton" onclick="showMarrowButtons()">MARROW</button>
+	</div>
+
+	<div class="additional-buttons1">
+    	<!-- Anatomy button and its collapsible text -->
+    	<button id="anatomyButton" onclick="fetchAndToggleContent('anatomyp.html', 'anatomyText', 'anatomy-section')">ANATOMY</button>
+    	<div class="collapsible-text" id="anatomyText"></div>
+  	
+	
+	<!-- Biochemestry button and its collapsible text -->
+	<button id="biochemestryButton" onclick="fetchAndToggleContent('biochemestryp.html', 'biochemestryText')">BIOCHEMESTRY</button>
+	<div class="collapsible-text" id="biochemestryText">
+  	<!-- Biochemestry content will be dynamically inserted here -->
+	</div>
+
+	<!-- physiology button and its collapsible text -->
+	<button id="physiologyButton" onclick="fetchAndToggleContent('physiologyp.html', 'physiologyText')">PHYSIOLOGY</button>
+	<div class="collapsible-text" id="physiologyText">
+  	<!-- physiology content will be dynamically inserted here -->
+	</div>
+
+	<!-- pharmacology button and its collapsible text -->
+	<button id="pharmacologyButton" onclick="fetchAndToggleContent('pharmacologyp.html', 'pharmacologyText')">PHARMACOLOGY</button>
+	<div class="collapsible-text" id="pharmacologyText">
+  	<!-- pharmacology content will be dynamically inserted here -->
+	</div>
+
+	<!-- microbiology button and its collapsible text -->
+	<button id="microbiologyButton" onclick="fetchAndToggleContent('microbiologyp.html', 'microbiologyText')">MICROBIOLOGY</button>
+	<div class="collapsible-text" id="microbiologyText">
+  	<!-- microbiology content will be dynamically inserted here -->
+	</div>
+
+	<!-- pathology button and its collapsible text -->
+	<button id="pathologyButton" onclick="fetchAndToggleContent('pathologyp.html', 'pathologyText')">PATHOLOGY</button>
+	<div class="collapsible-text" id="pathologyText">
+  	<!-- pathology content will be dynamically inserted here -->
+	</div>
+
+	<!-- fmt button and its collapsible text -->
+	<button id="fmtButton" onclick="fetchAndToggleContent('fmtp.html', 'fmtText')">FMT</button>
+	<div class="collapsible-text" id="fmtText">
+  	<!-- fmt content will be dynamically inserted here -->
+	</div>
+
+	<!-- psm button and its collapsible text -->
+	<button id="psmButton" onclick="fetchAndToggleContent('psmp.html', 'psmText')">PSM</button>
+	<div class="collapsible-text" id="psmText">
+  	<!-- psm content will be dynamically inserted here -->
+	</div>
+
+
+	<!-- ent button and its collapsible text -->
+	<button id="entButton" onclick="fetchAndToggleContent('entp.html', 'entText')">ENT</button>
+	<div class="collapsible-text" id="entText">
+  	<!-- ent content will be dynamically inserted here -->
+	</div>
+
+	<!-- opthalmology button and its collapsible text -->
+	<button id="opthalmologyButton" onclick="fetchAndToggleContent('opthalmologyp.html', 'opthalmologyText')">OPTHALMOLOGY</button>
+	<div class="collapsible-text" id="opthalmologyText">
+  	<!-- opthalmology content will be dynamically inserted here -->
+	</div>
+
+	<!-- pediatrics button and its collapsible text -->
+	<button id="pediatricsButton" onclick="fetchAndToggleContent('pediatricsp.html', 'pediatricsText')">PEDIATRICS</button>
+	<div class="collapsible-text" id="pediatricsText">
+  	<!-- pediatrics content will be dynamically inserted here -->
+	</div>
+
+	<!-- surgery button and its collapsible text -->
+	<button id="surgeryButton" onclick="fetchAndToggleContent('surgeryp.html', 'surgeryText')">SURGERY</button>
+	<div class="collapsible-text" id="surgeryText">
+  	<!-- surgery content will be dynamically inserted here -->
+	</div>
+
+	<!-- radiology button and its collapsible text -->
+	<button id="radiologyButton" onclick="fetchAndToggleContent('radiologyp.html', 'radiologyText')">RADIOLOGY</button>
+	<div class="collapsible-text" id="radiologyText">
+  	<!-- radiology content will be dynamically inserted here -->
+	</div>
+
+	<!-- anesthesia button and its collapsible text -->
+	<button id="anesthesiaButton" onclick="fetchAndToggleContent('anesthesiap.html', 'anesthesiaText')">ANESTHESIA</button>
+	<div class="collapsible-text" id="anesthesiaText">
+  	<!-- anesthesia content will be dynamically inserted here -->
+	</div>
+
+	<!-- psychiatry button and its collapsible text -->
+	<button id="psychiatryButton" onclick="fetchAndToggleContent('psychiatryp.html', 'psychiatryText')">PSYCHIATRY</button>
+	<div class="collapsible-text" id="psychiatryText">
+  	<!-- psychiatry content will be dynamically inserted here -->
+	</div>
+
+	<!-- orthopedics button and its collapsible text -->
+	<button id="orthopedicsButton" onclick="fetchAndToggleContent('orthopedicsp.html', 'orthopedicsText')">ORTHOPEDICS</button>
+	<div class="collapsible-text" id="orthopedicsText">
+  	<!-- orthopedics content will be dynamically inserted here -->
+	</div>
+
+	<!-- dermatology button and its collapsible text -->
+	<button id="dermatologyButton" onclick="fetchAndToggleContent('dermatologyp.html', 'dermatologyText')">DERMATOLOGY</button>
+	<div class="collapsible-text" id="dermatologyText">
+  	<!-- dermatology content will be dynamically inserted here -->
+	</div>
+
+	<!-- obgy button and its collapsible text -->
+	<button id="obgyButton" onclick="fetchAndToggleContent('obgyp.html', 'obgyText')">OBS AND GYNE</button>
+	<div class="collapsible-text" id="obgyText">
+  	<!-- obgy content will be dynamically inserted here -->
+	</div>
+
+	<!-- medicine button and its collapsible text -->
+	<button id="medicineButton" onclick="fetchAndToggleContent('medicinep.html', 'medicineText')">MEDICINE</button>
+	<div class="collapsible-text" id="medicineText">
+  	<!-- medicine content will be dynamically inserted here -->
+	</div>
+
+	<!-- rr button and its collapsible text -->
+	<button id="rrButton" onclick="fetchAndToggleContent('rrp.html', 'rrText')">RAPID REVISION</button>
+	<div class="collapsible-text" id="rrText">
+  	<!-- rr content will be dynamically inserted here -->
+	</div>
+
+	<!-- clinical button and its collapsible text -->
+	<button id="clinicalButton" onclick="fetchAndToggleContent('clinicalp.html', 'clinicalText')">CLINICALS </button>
+	<div class="collapsible-text" id="clinicalText">
+  	<!-- clinical content will be dynamically inserted here -->
+	</div>  
+
+
+	
+	<button class="back-button" onclick="backToMainMenu('additional-buttons1')">BACK TO MAIN MENU</button>
+  </div>
+
+  <div class="additional-buttons2">
+ 	<!-- Anatomy button and its collapsible text -->
+ 	<button id="anatomymButton" onclick="openURL('https://www.toprevenuegate.com/h60mzeawt?key=0a67a50f3b04b5bb89e7083511ca026e')">ANATOMY</button>
+ 	<div class="collapsible-text" id="anatomymText">
+  	<!-- Anatomy content will be dynamically inserted here -->
+  	</div>
+         	
+	<!-- Biochemestry button and its collapsible text -->
+	<button id="biochemestrymButton" onclick="fetchAndToggleContent('biochemestrym.html', 'biochemestrymText')">BIOCHEMESTRY</button>
+	<div class="collapsible-text" id="biochemestrymText">
+  	<!-- Biochemestry content will be dynamically inserted here -->
+	</div>
+
+	<!-- physiology button and its collapsible text -->
+	<button id="physiologymButton" onclick="openURL('https://www.toprevenuegate.com/n6prfn1umy?key=43e88299d214f0966eaedef65f677fc9')">PHYSIOLOGY</button>
+	<div class="collapsible-text" id="physiologymText">
+  	<!-- physiology content will be dynamically inserted here -->
+	</div>
+
+	<!-- pharmacology button and its collapsible text -->
+	<button id="pharmacologymButton" onclick="openURL('https://www.toprevenuegate.com/n6prfn1umy?key=43e88299d214f0966eaedef65f677fc9')">PHARMACOLOGY</button>
+	<div class="collapsible-text" id="pharmacologymText">
+  	<!-- pharmacology content will be dynamically inserted here -->
+	</div>
+
+	<!-- microbiology button and its collapsible text -->
+	<button id="microbiologymButton" onclick="openURL('https://www.toprevenuegate.com/n6prfn1umy?key=43e88299d214f0966eaedef65f677fc9')">MICROBIOLOGY</button>
+	<div class="collapsible-text" id="microbiologymText">
+  	<!-- microbiology content will be dynamically inserted here -->
+	</div>
+
+	<!-- pathology button and its collapsible text -->
+	<button id="pathologymButton" onclick="fetchAndToggleContent('pathologym.html', 'pathologymText')">PATHOLOGY</button>
+	<div class="collapsible-text" id="pathologymText">
+  	<!-- pathology content will be dynamically inserted here -->
+	</div>
+
+	<!-- fmt button and its collapsible text -->
+	<button id="fmtmButton" onclick="fetchAndToggleContent('fmtm.html', 'fmtmText')">FMT</button>
+	<div class="collapsible-text" id="fmtmText">
+  	<!-- fmt content will be dynamically inserted here -->
+	</div>
+
+	<!-- psm button and its collapsible text -->
+	<button id="psmmButton" onclick="fetchAndToggleContent('psmm.html', 'psmmText')">PSM</button>
+	<div class="collapsible-text" id="psmmText">
+  	<!-- psm content will be dynamically inserted here -->
+	</div>
+
+
+	<!-- ent button and its collapsible text -->
+	<button id="entmButton" onclick="fetchAndToggleContent('entm.html', 'entmText')">ENT</button>
+	<div class="collapsible-text" id="entmText">
+  	<!-- ent content will be dynamically inserted here -->
+	</div>
+
+	<!-- opthalmology button and its collapsible text -->
+	<button id="opthalmologymButton" onclick="fetchAndToggleContent('opthalmologym.html', 'opthalmologymText')">OPTHALMOLOGY</button>
+	<div class="collapsible-text" id="opthalmologymText">
+  	<!-- opthalmology content will be dynamically inserted here -->
+	</div>
+
+	<!-- pediatrics button and its collapsible text -->
+	<button id="pediatricsmButton" onclick="fetchAndToggleContent('pediatricsm.html', 'pediatricsmText')">PEDIATRICS</button>
+	<div class="collapsible-text" id="pediatricsmText">
+  	<!-- pediatrics content will be dynamically inserted here -->
+	</div>
+
+	<!-- surgery button and its collapsible text -->
+	<button id="surgerymButton" onclick="fetchAndToggleContent('surgerym.html', 'surgerymText')">SURGERY</button>
+	<div class="collapsible-text" id="surgerymText">
+  	<!-- surgery content will be dynamically inserted here -->
+	</div>
+
+	<!-- radiology button and its collapsible text -->
+	<button id="radiologymButton" onclick="fetchAndToggleContent('radiologym.html', 'radiologymText')">RADIOLOGY</button>
+	<div class="collapsible-text" id="radiologymText">
+  	<!-- radiology content will be dynamically inserted here -->
+	</div>
+
+	<!-- anesthesia button and its collapsible text -->
+	<button id="anesthesiamButton" onclick="fetchAndToggleContent('anesthesiam.html', 'anesthesiamText')">ANESTHESIA</button>
+	<div class="collapsible-text" id="anesthesiamText">
+  	<!-- anesthesia content will be dynamically inserted here -->
+	</div>
+
+	<!-- psychiatry button and its collapsible text -->
+	<button id="psychiatrymButton" onclick="fetchAndToggleContent('psychiatrym.html', 'psychiatrymText')">PSYCHIATRY</button>
+	<div class="collapsible-text" id="psychiatrymText">
+  	<!-- psychiatry content will be dynamically inserted here -->
+	</div>
+
+	<!-- orthopedics button and its collapsible text -->
+	<button id="orthopedicsmButton" onclick="fetchAndToggleContent('orthopedicsm.html', 'orthopedicsmText')">ORTHOPEDICS</button>
+	<div class="collapsible-text" id="orthopedicsmText">
+  	<!-- orthopedics content will be dynamically inserted here -->
+	</div>
+
+	<!-- dermatology button and its collapsible text -->
+	<button id="dermatologymButton" onclick="fetchAndToggleContent('dermatologym.html', 'dermatologymText')">DERMATOLOGY</button>
+	<div class="collapsible-text" id="dermatologymText">
+  	<!-- dermatology content will be dynamically inserted here -->
+	</div>
+
+	<!-- obgy button and its collapsible text -->
+	<button id="obgymButton" onclick="fetchAndToggleContent('obgym.html', 'obgymText')">OBS AND GYNE</button>
+	<div class="collapsible-text" id="obgymText">
+  	<!-- obgy content will be dynamically inserted here -->
+	</div>
+
+	<!-- medicine button and its collapsible text -->
+	<button id="medicinemButton" onclick="openURL('https://www.toprevenuegate.com/n6prfn1umy?key=43e88299d214f0966eaedef65f677fc9')">MEDICINE</button>
+	<div class="collapsible-text" id="medicinemText">
+  	<!-- medicine content will be dynamically inserted here -->
+	</div>
+
+	<div class="back-button-container">
+	<button class="back-button" onclick="backToMainMenu('additional-buttons2')">BACK TO MAIN MENU</button>
+  </div>
+
+		
+	<footer>
+    	Copyright © 2024 NEXTPULSE. All Rights Reserved.
+	</footer>
+
+	<script>
+    	// JavaScript function to show the additional buttons for PREPLADDER
+    	function showPrepladderButtons() {
+        	var prepladderButton = document.getElementById('prepladderButton');
+        	prepladderButton.style.display = 'none';
+
+        	var marrowButton = document.getElementById('marrowButton');
+        	marrowButton.style.display = 'none';
+
+        	var prepladderButtonsContainer = document.querySelector('.additional-buttons1');
+        	prepladderButtonsContainer.style.display = 'block';
+    	}
+
+    	// JavaScript function to show the additional buttons for MARROW
+    	function showMarrowButtons() {
+        	var marrowButton = document.getElementById('marrowButton');
+        	marrowButton.style.display = 'none';
+
+        	var prepladderButton = document.getElementById('prepladderButton');
+        	prepladderButton.style.display = 'none';
+
+        	var marrowButtonsContainer = document.querySelector('.additional-buttons2');
+        	marrowButtonsContainer.style.display = 'block';
+    	}
+   	
+
+    	// JavaScript function to go back to the main menu
+    	function backToMainMenu(containerClass) {
+        	var prepladderButton = document.getElementById('prepladderButton');
+        	prepladderButton.style.display = 'block';
+
+        	var additionalButtonsContainer = document.querySelector('.' + containerClass);
+        	additionalButtonsContainer.style.display = 'none';
+
+        	var marrowButton = document.getElementById('marrowButton');
+        	marrowButton.style.display = 'block';
+    	}
+
+	function getSuggestions() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const suggestionList = document.getElementById('suggestionList');
+            const githubURL = 'https://raw.githubusercontent.com/tk22kalal/resourcesNEXTPULSE/master/plugins/';
+            const filenames = [];
+
+            for (let i = 1; ; i++) {
+                const buttonSet = document.querySelector('.additional-buttons' + i);
+                if (!buttonSet) break;
+
+                const buttons = buttonSet.querySelectorAll('button');
+                buttons.forEach(button => {
+                    const onclickAttribute = button.getAttribute('onclick');
+                    if (onclickAttribute) {
+                        const matches = onclickAttribute.match(/fetchAndToggleContent\(['"]([^'"]+)['"]/);
+                        if (matches && matches[1]) {
+                            filenames.push(matches[1]);
+                        }
+                    }
+                });
+            }
+
+            suggestionList.innerHTML = '';
+
+            if (input.trim() === '') {
+                return;
+            }
+
+            filenames.forEach(filename => {
+                fetch(githubURL + filename)
+                    .then(response => response.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        const table = doc.querySelector('table');
+
+                        for (let i = 1; i < table.rows.length; i++) {
+                            const rowText = table.rows[i].textContent.toLowerCase();
+
+                            if (rowText.includes(input)) {
+                                const suggestionItem = document.createElement('li');
+                                const link = table.rows[i].querySelector('a');
+                                if (link) {
+                                    suggestionItem.innerHTML = `<a href="${link.href}" target="_blank">${rowText}</a>`;
+                                } else {
+                                    suggestionItem.textContent = rowText;
+                                }
+                                suggestionList.appendChild(suggestionItem);
+                            }
+                        }
+                    })
+                    .catch(error => console.error('Error fetching data:', error));
+            });
+        }
+
+    	// Updated fetchAndToggleContent function
+    	function fetchAndToggleContent(filename, textId, headingClass) {
+        	var contentContainer = document.getElementById(textId);
+
+        	fetch('https://raw.githubusercontent.com/tk22kalal/resourcesNEXTPULSE/master/plugins/' + filename)
+            	.then(response => {
+                	if (!response.ok) {
+                    	throw new Error('Network response was not ok');
+                	}
+                	return response.text();
+            	})
+            	.then(data => {
+                	contentContainer.innerHTML = data;
+
+                	// Toggle the display of headings based on the headingClass parameter
+                	var headings = contentContainer.querySelectorAll('.' + headingClass + ' h2');
+                	headings.forEach(heading => {
+                    	heading.style.display = 'block';
+                	});
+
+                	// Search functionality within the loaded content table
+                	enableSearchInContentTable(contentContainer, 'input-box');
+
+                	contentContainer.style.display = (contentContainer.style.display === 'block') ? 'none' : 'block';
+            	})
+            	.catch(error => console.error('Error fetching content:', error));
+    	}
+
+    	// New function for enabling search in the loaded content table
+    	function enableSearchInContentTable(contentContainer, inputId) {
+        	const searchFun = () => {
+            	let filter = document.getElementById(inputId).value.toUpperCase();
+            	let contentTable = contentContainer.querySelector('.content-table');
+            	let rows = contentTable.querySelectorAll('tbody tr');
+
+            	rows.forEach(row => {
+                	let cells = row.getElementsByTagName('td');
+
+                	let rowMatches = Array.from(cells).some(cell => {
+                    	let textValue = cell.textContent || cell.innerHTML;
+                    	return textValue.toUpperCase().includes(filter);
+                	});
+
+                	if (rowMatches) {
+                    	row.style.display = '';
+                	} else {
+                    	row.style.display = 'none';
+                	}
+            	});
+        	};
+
+        	// Attach the search function to the input element
+        	document.getElementById(inputId).addEventListener('keyup', searchFun);
+    	}
+	function openURL(url) {
+		window.open(url, '_blank');
+	}			
+		
+	</script>
+
+</body>
+
+</html>

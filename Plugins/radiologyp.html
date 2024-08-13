@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+  
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1808/1.+Basics+of+Radiology+Part-1.mp4?hash=AgADpQ' target='_blank'> 1. Basics of Radiology Part-1 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1809/2.+Basics+of+Radiology+Part-2.mp4?hash=AgADpg' target='_blank'> 2. Basics of Radiology Part-2 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1810/3.+Basics+of+MRi.mp4?hash=AgADpw' target='_blank'> 3. Basics of MRi </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1811/4.+Intervetional+Radiology.mp4?hash=AgADqA' target='_blank'> 4. Intervetional Radiology </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1812/5.+Radiation+Units%2C+Protectionn%2C+Dose+Limits+and+Hazards.mp4?hash=AgADqQ' target='_blank'> 5. Radiation Units, Protectionn, Dose Limits and Hazards </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1813/6.+Contrast+Media.mp4?hash=AgADqg' target='_blank'> 6. Contrast Media </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1814/1.+Respiratory+Radiology.mp4?hash=AgADrA' target='_blank'> 1. Respiratory Radiology </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1815/2.+CVS+Radiology.mp4?hash=AgADrQ' target='_blank'> 2. CVS Radiology </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1816/1.+Neuroradiology+Part-1.mp4?hash=AgADrg' target='_blank'> 1. Neuroradiology Part-1 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1817/2.+Neuroradiology+Part-2.mp4?hash=AgADrw' target='_blank'> 2. Neuroradiology Part-2 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1818/3.+Head+and+Neck+Radiology.mp4?hash=AgADsA' target='_blank'> 3. Head and Neck Radiology </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1819/1.+GIT.mp4?hash=AgADsQ' target='_blank'> 1. GIT </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1820/1.+Hepatobiliary+and+Pancreatic+Radiology.mp4?hash=AgADsg' target='_blank'> 1. Hepatobiliary and Pancreatic Radiology </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1821/1.+Genitourinary+Radiology.mp4?hash=AgADtQ' target='_blank'> 1. Genitourinary Radiology </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1822/1.+OBGy+Imaging.mp4?hash=AgADtg' target='_blank'> 1. OBGy Imaging </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1823/2.+Breast+Imaging.mp4?hash=AgADtw' target='_blank'> 2. Breast Imaging </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1824/1.+MSK.mp4?hash=AgADuA' target='_blank'> 1. MSK </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1825/1.+nuclear+Medicine.mp4?hash=AgADuQ' target='_blank'> 1. nuclear Medicine </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1826/1.+Radiotherapy.mp4?hash=AgADug' target='_blank'> 1. Radiotherapy </a></td></tr>							
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

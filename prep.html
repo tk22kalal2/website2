@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="styleprep.css">
+    </head>
+    <body>       
+        <div class="additional-buttons1 button-container">
+	     <button type="button"><a href="anatomyp.html">ANATOMY</a></button>
+    	     <button id="anatomyButton" onclick="fetchAndToggleContent('anatomyp.html', 'anatomyText', 'anatomy-section')">ANATOMY</button>
+    	<div class="collapsible-text" id="anatomyText"></div>
+  	
+	
+	<!-- Biochemestry button and its collapsible text -->
+	<button id="biochemestryButton" onclick="fetchAndToggleContent('biochemestryp.html', 'biochemestryText')">BIOCHEMESTRY</button>
+	<div class="collapsible-text" id="biochemestryText">
+  	<!-- Biochemestry content will be dynamically inserted here -->
+	</div>
+
+	<!-- physiology button and its collapsible text -->
+	<button id="physiologyButton" onclick="fetchAndToggleContent('physiologyp.html', 'physiologyText')">PHYSIOLOGY</button>
+	<div class="collapsible-text" id="physiologyText">
+  	<!-- physiology content will be dynamically inserted here -->
+	</div>
+
+	<!-- pharmacology button and its collapsible text -->
+	<button id="pharmacologyButton" onclick="fetchAndToggleContent('pharmacologyp.html', 'pharmacologyText')">PHARMACOLOGY</button>
+	<div class="collapsible-text" id="pharmacologyText">
+  	<!-- pharmacology content will be dynamically inserted here -->
+	</div>
+
+	<!-- microbiology button and its collapsible text -->
+	<button id="microbiologyButton" onclick="fetchAndToggleContent('microbiologyp.html', 'microbiologyText')">MICROBIOLOGY</button>
+	<div class="collapsible-text" id="microbiologyText">
+  	<!-- microbiology content will be dynamically inserted here -->
+	</div>
+
+	<!-- pathology button and its collapsible text -->
+	<button id="pathologyButton" onclick="fetchAndToggleContent('pathologyp.html', 'pathologyText')">PATHOLOGY</button>
+	<div class="collapsible-text" id="pathologyText">
+  	<!-- pathology content will be dynamically inserted here -->
+	</div>
+
+	<!-- fmt button and its collapsible text -->
+	<button id="fmtButton" onclick="fetchAndToggleContent('fmtp.html', 'fmtText')">FMT</button>
+	<div class="collapsible-text" id="fmtText">
+  	<!-- fmt content will be dynamically inserted here -->
+	</div>
+
+	<!-- psm button and its collapsible text -->
+	<button id="psmButton" onclick="fetchAndToggleContent('psmp.html', 'psmText')">PSM</button>
+	<div class="collapsible-text" id="psmText">
+  	<!-- psm content will be dynamically inserted here -->
+	</div>
+
+
+	<!-- ent button and its collapsible text -->
+	<button id="entButton" onclick="fetchAndToggleContent('entp.html', 'entText')">ENT</button>
+	<div class="collapsible-text" id="entText">
+  	<!-- ent content will be dynamically inserted here -->
+	</div>
+
+	<!-- opthalmology button and its collapsible text -->
+	<button id="opthalmologyButton" onclick="fetchAndToggleContent('opthalmologyp.html', 'opthalmologyText')">OPTHALMOLOGY</button>
+	<div class="collapsible-text" id="opthalmologyText">
+  	<!-- opthalmology content will be dynamically inserted here -->
+	</div>
+
+	<!-- pediatrics button and its collapsible text -->
+	<button id="pediatricsButton" onclick="fetchAndToggleContent('pediatricsp.html', 'pediatricsText')">PEDIATRICS</button>
+	<div class="collapsible-text" id="pediatricsText">
+  	<!-- pediatrics content will be dynamically inserted here -->
+	</div>
+
+	<!-- surgery button and its collapsible text -->
+	<button id="surgeryButton" onclick="fetchAndToggleContent('surgeryp.html', 'surgeryText')">SURGERY</button>
+	<div class="collapsible-text" id="surgeryText">
+  	<!-- surgery content will be dynamically inserted here -->
+	</div>
+
+	<!-- radiology button and its collapsible text -->
+	<button id="radiologyButton" onclick="fetchAndToggleContent('radiologyp.html', 'radiologyText')">RADIOLOGY</button>
+	<div class="collapsible-text" id="radiologyText">
+  	<!-- radiology content will be dynamically inserted here -->
+	</div>
+
+	<!-- anesthesia button and its collapsible text -->
+	<button id="anesthesiaButton" onclick="fetchAndToggleContent('anesthesiap.html', 'anesthesiaText')">ANESTHESIA</button>
+	<div class="collapsible-text" id="anesthesiaText">
+  	<!-- anesthesia content will be dynamically inserted here -->
+	</div>
+
+	<!-- psychiatry button and its collapsible text -->
+	<button id="psychiatryButton" onclick="fetchAndToggleContent('psychiatryp.html', 'psychiatryText')">PSYCHIATRY</button>
+	<div class="collapsible-text" id="psychiatryText">
+  	<!-- psychiatry content will be dynamically inserted here -->
+	</div>
+
+	<!-- orthopedics button and its collapsible text -->
+	<button id="orthopedicsButton" onclick="fetchAndToggleContent('orthopedicsp.html', 'orthopedicsText')">ORTHOPEDICS</button>
+	<div class="collapsible-text" id="orthopedicsText">
+  	<!-- orthopedics content will be dynamically inserted here -->
+	</div>
+
+	<!-- dermatology button and its collapsible text -->
+	<button id="dermatologyButton" onclick="fetchAndToggleContent('dermatologyp.html', 'dermatologyText')">DERMATOLOGY</button>
+	<div class="collapsible-text" id="dermatologyText">
+  	<!-- dermatology content will be dynamically inserted here -->
+	</div>
+
+	<!-- obgy button and its collapsible text -->
+	<button id="obgyButton" onclick="fetchAndToggleContent('obgyp.html', 'obgyText')">OBS AND GYNE</button>
+	<div class="collapsible-text" id="obgyText">
+  	<!-- obgy content will be dynamically inserted here -->
+	</div>
+
+	<!-- medicine button and its collapsible text -->
+	<button id="medicineButton" onclick="fetchAndToggleContent('medicinep.html', 'medicineText')">MEDICINE</button>
+	<div class="collapsible-text" id="medicineText">
+  	<!-- medicine content will be dynamically inserted here -->
+	</div>
+
+	<!-- rr button and its collapsible text -->
+	<button id="rrButton" onclick="fetchAndToggleContent('rrp.html', 'rrText')">RAPID REVISION</button>
+	<div class="collapsible-text" id="rrText">
+  	<!-- rr content will be dynamically inserted here -->
+	</div>
+
+	<!-- clinical button and its collapsible text -->
+	<button id="clinicalButton" onclick="fetchAndToggleContent('clinicalp.html', 'clinicalText')">CLINICALS </button>
+	<div class="collapsible-text" id="clinicalText">
+  	<!-- clinical content will be dynamically inserted here -->
+	</div>  	
+	<button class="back-button" onclick="backToMainMenu('additional-buttons1')">BACK TO MAIN MENU</button>
+         </div>
+         </div>
+    </div>
+</body>
+</html>       

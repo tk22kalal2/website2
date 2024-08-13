@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+  
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8406/MIST+ENT+1.MOV?hash=AgADHg' target='_blank'> MIST ENT PART 1 Dr. Rajiv Dhawan </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8407/MIST+ENT+2.MOV?hash=AgADIA' target='_blank'> MIST ENT PART 2 Dr. Rajiv Dhawan </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8408/MIST+ENT+3.MOV?hash=AgADIQ' target='_blank'> MIST ENT PART 3 Dr. Rajiv Dhawan </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8409/MIST+ENT+4.mp4?hash=AgADIg' target='_blank'> MIST ENT PART 4 Dr. Rajiv Dhawan </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8410/MIST+ENT+5.mp4?hash=AgADJw' target='_blank'> MIST ENT PART 5 Dr. Rajiv Dhawan </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8411/MIST+ENT+6.mp4?hash=AgADLA' target='_blank'> MIST ENT PART 6 Dr. Rajiv Dhawan </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8412/MIST+ENT+7.mp4?hash=AgADLg' target='_blank'> MIST ENT PART 7 Dr. Rajiv Dhawan </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8413/MIST+ENT+8.mp4?hash=AgADLw' target='_blank'> MIST ENT PART 8 Dr. Rajiv Dhawan </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8414/MIST+ENT+9.mp4?hash=AgADMg' target='_blank'> MIST ENT PART 9 Dr. Rajiv Dhawan </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8415/MIST+ENT+10.mp4?hash=AgADMw' target='_blank'> MIST ENT PART 10 Dr. Rajiv Dhawan </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8416/MIST+ENT+11.mp4?hash=AgADNA' target='_blank'> MIST ENT PART 11 Dr. Rajiv Dhawan </a></td></tr>						
+<script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

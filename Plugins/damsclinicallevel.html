@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+  
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8298/Acute+kidney+injury-Dr.+Srinath+atf.mp4?hash=AgADwD' target='_blank'> Acute kidney injury-Dr. Srinath atf.mp4 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8299/Chronic+Renal+Failure%2C+Renal+replacement+-+Dr.+Srinath+atf.mp4?hash=AgADxT' target='_blank'> Chronic Renal Failure, Renal replacement - Dr. Srinath atf.mp4 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8300/Liver-Dr.+Arvind+atf.mp4?hash=AgADyT' target='_blank'> Liver-Dr. Arvind atf.mp4 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8301/Respiratory+symptoms%2C+PFT+%2C+Respiratory+disorders-Dr.+Bharat.mp4?hash=AgADzz' target='_blank'> Respiratory symptoms, PFT , Respiratory disorders-Dr. Bharat Kathi atf.mp4 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8302/Basics+of+Obstetrics+-+Dr.+Anil+Mirchandani+atf.mp4?hash=AgAD1D' target='_blank'> Basics of Obstetrics - Dr. Anil Mirchandani atf.mp4 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8303/Early+pregnancy+complications+-+Dr.+Deepti+Bahl+atf.mp4?hash=AgAD3D' target='_blank'> Early pregnancy complications - Dr. Deepti Bahl atf.mp4 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8304/Cornea+%26+Conjuctiva+-+Dr.+Manish+Chhabra+atf.mp4?hash=AgAD4j' target='_blank'> Cornea & Conjuctiva - Dr. Manish Chhabra atf.mp4 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8305/Genetics-Dr.+Sidharth+Sethi+atf.mp4?hash=AgAD6D' target='_blank'> Genetics-Dr. Sidharth Sethi atf.mp4 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8306/Neonatology-Dr.+Ashutosh+Aggrawal+atf.mp4?hash=AgAD8D' target='_blank'> Neonatology-Dr. Ashutosh Aggrawal atf.mp4 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8307/Nephrology-Dr.+Sidharth+Sethi+atf.mp4?hash=AgAD9j' target='_blank'> Nephrology-Dr. Sidharth Sethi atf.mp4 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8308/Pediatric+Endocrine+-+Dr.+Siddharth+Sethi+atf.mp4?hash=AgAD_j' target='_blank'> Pediatric Endocrine - Dr. Siddharth Sethi atf.mp4 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8309/Bariatric+Surgery+%26+Hernia+-Dr.+Rajeev+Tewari+atf.mp4?hash=AgADBj' target='_blank'> Bariatric Surgery & Hernia -Dr. Rajeev Tewari atf.mp4 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8310/Breast%2C+Thyroid+parathyroid+-+Dr.+Gaurav+Patel+atf.mp4?hash=AgADDj' target='_blank'> Breast, Thyroid parathyroid - Dr. Gaurav Patel atf.mp4 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8311/Esophagus%2C+Stomach%2C+UGI+haemorrhage+-+Dr.+Rajeev+Tewari+atf.mp4?hash=AgADFT' target='_blank'> Esophagus, Stomach, UGI haemorrhage - Dr. Rajeev Tewari atf.mp4 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8312/Kidney+%26+Adrenal+-+Dr.+Sujoy+atf.mp4?hash=AgADGz' target='_blank'> Kidney & Adrenal - Dr. Sujoy atf.mp4 </a></td></tr>	
+</table>
+<script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>
