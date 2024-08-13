@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+  
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8362/MIST+PSM+1.mp4?hash=AgADTA' target='_blank'> MIST PSM PART 1 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8363/MIST+PSM+2.mp4?hash=AgADTg' target='_blank'> MIST PSM PART 2 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8364/MIST+PSM+3.mp4?hash=AgADTw' target='_blank'> MIST PSM PART 3 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8365/MIST+PSM+4.mp4?hash=AgADUw' target='_blank'> MIST PSM PART 4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8366/MIST+PSM+5.mp4?hash=AgADVA' target='_blank'> MIST PSM PART 5 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8367/MIST+PSM+6.mp4?hash=AgADVQ' target='_blank'> MIST PSM PART 6 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8368/MIST+PSM+RR.mp4?hash=AgADWg' target='_blank'> MIST PSM PART 7 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8369/MIST+PSM+T%26D+1+.mp4?hash=AgADXA' target='_blank'> MIST PSM PART 8 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8370/MIST+PSM+T%26D+2.mp4?hash=AgADXQ' target='_blank'> MIST PSM PART 9 </a></td></tr>							
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

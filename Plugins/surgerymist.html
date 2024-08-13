@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+  
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8389/MIST+SURGERY+1.mp4?hash=AgADOg' target='_blank'> MIST SURGERY PART 1 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8390/MIST+SURGERY+2.mp4?hash=AgADkg' target='_blank'> MIST SURGERY PART 2 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8391/MIST+SURGERY+3.mp4?hash=AgADkw' target='_blank'> MIST SURGERY PART 3 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8392/MIST+SURGERY+4.mp4?hash=AgADlw' target='_blank'> MIST SURGERY PART 4 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8393/MIST+SURGERY+5.mp4?hash=AgADpg' target='_blank'> MIST SURGERY PART 5 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8394/MIST+SURGERY+6.mp4?hash=AgADpw' target='_blank'> MIST SURGERY PART 6 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8395/MIST+SURGERY+7.mp4?hash=AgADqQ' target='_blank'> MIST SURGERY PART 7 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8396/MIST+SURGERY+8.mp4?hash=AgADqg' target='_blank'> MIST SURGERY PART 8 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8397/MIST+SURGERY+9.mp4?hash=AgADqw' target='_blank'> MIST SURGERY PART 9 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8398/MIST+SURGERY+10.mp4?hash=AgADrA' target='_blank'> MIST SURGERY PART 10 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8399/MIST+SURGERY+11.mp4?hash=AgADrg' target='_blank'> MIST SURGERY PART 11 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8400/MIST+SURGERY+12.mp4?hash=AgADrw' target='_blank'> MIST SURGERY PART 12 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8401/MIST+SURGERY+13.mp4?hash=AgADsA' target='_blank'> MIST SURGERY PART 13 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8402/MIST+SURGERY+14.mp4?hash=AgADsQ' target='_blank'> MIST SURGERY PART 14 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8403/MIST+SURGERY+15.mp4?hash=AgADsg' target='_blank'> MIST SURGERY PART 15 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8404/MIST+SURGERY+16.mp4?hash=AgADsw' target='_blank'> MIST SURGERY PART 16 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8405/MIST+SURGERY+17.mp4?hash=AgADtA' target='_blank'> MIST SURGERY PART 17 </a></td></tr>						
+</table>
+<script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

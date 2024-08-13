@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+  
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7431/1.+CT+Scan+Basics+atf.mp4?hash=AgADsB' target='_blank'> 1. CT Scan Basics atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7432/10.+PET%2C+Radiotherapy%2C+Nuclear+Scan+atf.mp4?hash=AgADsR' target='_blank'> 10. PET, Radiotherapy, Nuclear Scan atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7433/11.+Post+Class+Test+atf.mp4?hash=AgADsh' target='_blank'> 11. Post Class Test atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7434/2.+MRI+Applications+atf.mp4?hash=AgADsx' target='_blank'> 2. MRI Applications atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7435/3.+Neuroimaging+atf.mp4?hash=AgADux' target='_blank'> 3. Neuroimaging atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7436/4.+CXR+Basics+atf.mp4?hash=AgADwB' target='_blank'> 4. CXR Basics atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7437/5.+Chest+disease+and+CVS+atf.mp4?hash=AgADxB' target='_blank'> 5. Chest disease and CVS atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7438/6.+Bone+Tumour+atf.mp4?hash=AgADyB' target='_blank'> 6. Bone Tumour atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7439/7.+Orthopedics%2CUSG+atf.mp4?hash=AgADzx' target='_blank'> 7. Orthopedics,USG atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7440/8.+IVP%2CBarium+atf.mp4?hash=AgAD0x' target='_blank'> 8. IVP,Barium atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7441/9.+CT+abdomen%2C+Mammography+atf.mp4?hash=AgAD2B' target='_blank'> 9. CT abdomen, Mammography atf.mp4 </a></td></tr>							
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

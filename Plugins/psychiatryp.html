@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+<tr><td><a href='https://www.mynextpulse.site/watch/10822/1.+Basics+of+Psychiatry.mp4?hash=AgAD0w' target='_blank'> 1. Basics of Psychiatry </a></td></tr>						
+<tr><td><a href='https://www.mynextpulse.site/watch/10823/2.+Schizophrenia+other+Psychotic+Disorders.mp4?hash=AgAD1A' target='_blank'> 1. Schizophrenia other Psychotic Disorders </a></td></tr>						
+<tr><td><a href='https://www.mynextpulse.site/watch/10824/1.+Mood+DIsorder+.mp4?hash=AgAD2A' target='_blank'> 1. Mood DIsorder </a></td></tr>						
+<tr><td><a href='https://www.mynextpulse.site/watch/10825/1.+Neurotic+Stress+Related+Somatoform+Disorders.mp4?hash=AgAD2Q' target='_blank'> 1. Neurotic Stress Related Somatoform Disorders </a></td></tr>						
+<tr><td><a href='https://www.mynextpulse.site/watch/10826/2.+Trauma+and+Stressor+Related+Disorders.mp4?hash=AgAD2g' target='_blank'> 2. Trauma and Stressor Related Disorders </a></td></tr>						
+<tr><td><a href='https://www.mynextpulse.site/watch/10827/3_Dissocaitive_Disorders_Conversion_Disorder_Somatic_Symptoms_and.mp4?hash=AgAD2w' target='_blank'> 3. Dissocaitive Disorders Conversion Disorder Somatic Symptoms and Related Disorders </a></td></tr>						
+<tr><td><a href='https://www.mynextpulse.site/watch/10828/1.+Substance+Use+Addictive+Disorders.mp4?hash=AgAD3Q' target='_blank'> 1. Substance Use Addictive Disorders </a></td></tr>						
+<tr><td><a href='https://www.mynextpulse.site/watch/10829/1.+Child+Psychiatry.mp4?hash=AgAD3w' target='_blank'> 1. Child Psychiatry </a></td></tr>						
+<tr><td><a href='https://www.mynextpulse.site/watch/10830/1.+Organic+Mental+Disorders.mp4?hash=AgAD4A' target='_blank'> 1. Organic Mental Disorders </a></td></tr>						
+<tr><td><a href='https://www.mynextpulse.site/watch/10831/1.+Sleep+Disorder.mp4?hash=AgAD4Q' target='_blank'> 1. Sleep Disorder </a></td></tr>						
+<tr><td><a href='https://www.mynextpulse.site/watch/10832/1.+Sexual+Disorder.mp4?hash=AgAD4g' target='_blank'> 1. Sexual Disorder </a></td></tr>						
+<tr><td><a href='https://www.mynextpulse.site/watch/10833/1.+Eating+Disorders.mp4?hash=AgAD4w' target='_blank'> 1. Eating Disorders </a></td></tr>						
+<tr><td><a href='https://www.mynextpulse.site/watch/10834/1.+Personality+Disorders.mp4?hash=AgAD5A' target='_blank'> 1. Personality Disorders </a></td></tr>						
+<tr><td><a href='https://www.mynextpulse.site/watch/10835/1.+Forensic+Psychiatry.mp4?hash=AgAD5g' target='_blank'> 1. Forensic Psychiatry </a></td></tr>						
+<tr><td><a href='https://www.mynextpulse.site/watch/10836/1.+Psychology.mp4?hash=AgAD5w' target='_blank'> 13. Psychology </a></td></tr>						
+<tr><td><a href='https://www.mynextpulse.site/watch/10837/1.+Electro+Convulsive+Therapy%28Miscellaneous+Topics%29.mp4?hash=AgAD6A' target='_blank'> 1. Electro Convulsive Therapy(Miscellaneous Topics) </a></td></tr>						  
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

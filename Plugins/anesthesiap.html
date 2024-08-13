@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+<tr><td><a href='https://www.mynextpulse.site/watch/10805/1.+Introduction+to+Anesthesia.mp4?hash=AgADuw' target='_blank'> 1. Introduction to Anesthesia </a></td></tr>					
+<tr><td><a href='https://www.mynextpulse.site/watch/10806/2.History+and+Stages+of+Anesthesia.mp4?hash=AgADvA' target='_blank'> 2. History and Stages of Anesthesia </a></td></tr>					
+<tr><td><a href='https://www.mynextpulse.site/watch/10807/1.+Preanesthetic+Evalution.mp4?hash=AgADvQ' target='_blank'> 1. Preanesthetic Evalution </a></td></tr>					
+<tr><td><a href='https://www.mynextpulse.site/watch/10808/1.+Oxygen+Therapy+and+Airway.mp4?hash=AgADvg' target='_blank'> 1. Oxygen Therapy and Airway </a></td></tr>					
+<tr><td><a href='https://www.mynextpulse.site/watch/10809/2.+Airway+Devices.mp4?hash=AgADvw' target='_blank'> 2. Airway Devices </a></td></tr>					
+<tr><td><a href='https://www.mynextpulse.site/watch/10810/1.+Anesthesia+Machine.mp4?hash=AgADwA' target='_blank'> 1. Anesthesia Machine </a></td></tr>					
+<tr><td><a href='https://www.mynextpulse.site/watch/10811/1.+Anesthesia+Circuit.mp4?hash=AgADwQ' target='_blank'> 1. Anesthesia Circuit </a></td></tr>					
+<tr><td><a href='https://www.mynextpulse.site/watch/10812/1.+Monitoring+in+Anaesthesia.mp4?hash=AgADwg' target='_blank'> 1. Monitoring in Anaesthesia </a></td></tr>					
+<tr><td><a href='https://www.mynextpulse.site/watch/10813/1.+Modes+of+Ventilation.mp4?hash=AgADxA' target='_blank'> 1. Modes of Ventilation </a></td></tr>					
+<tr><td><a href='https://www.mynextpulse.site/watch/10814/1.+Inhalational+Anesthetic+Agents.mp4?hash=AgADxw' target='_blank'> 1. Inhalational Anesthetic Agents </a></td></tr>					
+<tr><td><a href='https://www.mynextpulse.site/watch/10815/1.+Intravenous+Anesthetic+Agents.mp4?hash=AgADyA' target='_blank'> 1. Intravenous Anesthetic Agents </a></td></tr>					
+<tr><td><a href='https://www.mynextpulse.site/watch/10816/1.+Neuromuscular+Blocker.mp4?hash=AgADyQ' target='_blank'> 1. Neuromuscular Blocker </a></td></tr>					
+<tr><td><a href='https://www.mynextpulse.site/watch/10817/1.+Regional+Anesthesia.mp4?hash=AgADyg' target='_blank'> 1. Regional Anesthesia </a></td></tr>					
+<tr><td><a href='https://www.mynextpulse.site/watch/10818/1.+Fluid+Therapy.mp4?hash=AgADzA' target='_blank'> 1. Fluid Therapy </a></td></tr>					
+<tr><td><a href='https://www.mynextpulse.site/watch/10819/1.+Discharge+Scoring+System.mp4?hash=AgADzQ' target='_blank'> 1. Discharge Scoring System </a></td></tr>					
+<tr><td><a href='https://www.mynextpulse.site/watch/10820/1.+BLS+and+ACLS+Protocol.mp4?hash=AgAD0A' target='_blank'> 1. BLS and ACLS Protocol </a></td></tr>					
+<tr><td><a href='https://www.mynextpulse.site/watch/10821/1.+Brain+Death.mp4?hash=AgAD0g' target='_blank'> 1. Brain Death </a></td></tr>					  
+</table>
+<script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

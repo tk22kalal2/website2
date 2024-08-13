@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+  
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8439/b270b5a3-d7f8-4e0d-b15e-65af8430a075.mp4?hash=AgADYj' target='_blank'> Mist physiology part 1 Dr Arun Swami </a></td></tr>			
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8440/a4f1d528-ac65-431c-a391-cff3da583ed9.mp4?hash=AgAD0D' target='_blank'> Mist physiology part 2 Dr Arun Swami </a></td></tr>			
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8441/15a1f8a8-a435-48c7-a351-6767c5a5fcc1.mp4?hash=AgAD0j' target='_blank'> Mist physiology part 3 Dr Arun Swami </a></td></tr>			
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8442/86c61906-0622-4773-8d8c-4537e413b721.mp4?hash=AgAD6j' target='_blank'> Mist physiology part 4 Dr Arun Swami </a></td></tr>			
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

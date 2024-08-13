@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+  
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8356/MIST+PSYCHIATRY+1.mp4?hash=AgADuA' target='_blank'> MIST PSYCHIATRY PART 1 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8357/MIST+PSYCHIATRY+2.mp4?hash=AgADvA' target='_blank'> MIST PSYCHIATRY PART 2 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8358/MIST+PSYCHIATRY+3.mp4?hash=AgADwQ' target='_blank'> MIST PSYCHIATRY PART 3 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8359/MIST+PSYCHIATRY+4.mp4?hash=AgADxg' target='_blank'> MIST PSYCHIATRY PART 4 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8360/MIST+PSYCHIATRY+5.mp4?hash=AgAD9A' target='_blank'> MIST PSYCHIATRY PART 5 </a></td></tr>						
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8361/MIST+PSYCHIATRY+6.mp4?hash=AgAD9w' target='_blank'> MIST PSYCHIATRY PART 6 </a></td></tr>						
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

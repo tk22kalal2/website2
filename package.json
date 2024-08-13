@@ -1,0 +1,15 @@
+{
+  "name": "Education_Website_22-05-23",
+  "version": "1.0.0",
+  "description": "education",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Tarang K",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^7.1.7"
+  }
+}

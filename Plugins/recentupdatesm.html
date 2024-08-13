@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+  
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/860/8_watermarked.mp4?hash=AgADRh' target='_blank'> Surgery recent updates - Bailey Chapters 1 to 5 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/861/9_watermarked.mp4?hash=AgADRx' target='_blank'> Surgery Recent updates - Nutriton </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/862/10_watermarked.mp4?hash=AgADSR' target='_blank'> Surgery Recent updates -Trauma </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/863/11_watermarked.mp4?hash=AgADTR' target='_blank'> Surgery Recent updates - Endocrine Surgery </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/864/12_watermarked.mp4?hash=AgADTx' target='_blank'> Surgery Recent updates - Head and Neck section </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/865/13_watermarked.mp4?hash=AgADUB' target='_blank'> Surgery Recent updates - GIT Part 1 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/866/14_watermarked.mp4?hash=AgADUR' target='_blank'> Surgery Recent updates - GIT Part 2 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/867/15_watermarked.mp4?hash=AgADUx' target='_blank'> Surgery Recent updates - GIT Part 3 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/868/16_watermarked.mp4?hash=AgADVR' target='_blank'> Surgery Recent updates - Urology </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/869/17_watermarked.mp4?hash=AgADVx' target='_blank'> Surgery Recent updates - Transplant surgery </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/870/18_watermarked.mp4?hash=AgADWB' target='_blank'> Surgery Recent updates - Vascular surgery </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/871/19_watermarked.mp4?hash=AgADWR' target='_blank'> Surgery Recent updates - Pediatrics surgery </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/872/3_watermarked.mp4?hash=AgADPB' target='_blank'> Medicine Recent updates - 1 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/873/4_watermarked.mp4?hash=AgADPR' target='_blank'> Medicine Recent updates - 2 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/874/20_watermarked.mp4?hash=AgADXB' target='_blank'> OBGY Recent updates - 1 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/875/21_watermarked.mp4?hash=AgADXR' target='_blank'> OBGY Recent updates - 2 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/876/7_watermarked.mp4?hash=AgADRB' target='_blank'> Paediatrics Recent updates </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/877/1_watermarked.mp4?hash=AgADNx' target='_blank'> Dermatology Recent updates </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/878/5_watermarked.mp4?hash=AgADPx' target='_blank'> Community Medicine Recent updates -1 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/879/6_watermarked.mp4?hash=AgADQR' target='_blank'> Community Medicine Recent updates -2 </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/880/2_watermarked.mp4?hash=AgADOh' target='_blank'> Pharmacology Recent updates </a></td></tr>	
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>
