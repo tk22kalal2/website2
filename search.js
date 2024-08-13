@@ -97,7 +97,7 @@ function displaySuggestions(suggestions) {
 
         // Create the info icon
         const infoIcon = document.createElement("i");
-        infoIcon.className = "fa-light fa-circle-info info-icon";
+        infoIcon.className = "fa-solid fa-circle-info info-icon"; // Use the solid icon class
         infoIcon.style.marginLeft = "10px";
         infoIcon.style.cursor = "pointer";
 
@@ -112,6 +112,7 @@ function displaySuggestions(suggestions) {
         suggestionList.appendChild(listItem);
     });
 }
+
 
 function hideSuggestions() {
     const suggestionList = document.getElementById("suggestionList");
