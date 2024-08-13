@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Links Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="subject.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="../index.html" class="back-link">
+            <i class="fa-solid fa-angle-left"></i> Back
+        </a>
+    </div>
+    <div class="content">
+        <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+                <thead>
+                    <tr>
+                        <th>LECTURE</th>
+                    </tr>
+                </thead>
+                <tbody>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDcxNDY4NjI4Njc0MTUz' target='_blank'>General Physiology Part - 1 By Dr. Ashish Sir</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDcyNDcwNjUzMDI5MDgw' target='_blank'>General Physiology Part - 2 By Dr. Ashish Sir</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDczNDcyNjc3Mzg0MDA3' target='_blank'>Endocrine Physiology Part - 1 By Ashish Sir</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDc0NDc0NzAxNzM4OTM0' target='_blank'>Endocrine Physiology Part - 2 By Ashish Sir</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDc1NDc2NzI2MDkzODYx' target='_blank'>Endocrine Physiology Part - 3 By Ashish Sir</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDc2NDc4NzUwNDQ4Nzg4' target='_blank'>Endocrine Physiology Part - 4 By Ashish Sir</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDc3NDgwNzc0ODAzNzE1' target='_blank'>Endocrine Physiology Part - 5 By Ashish Sir</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDc4NDgyNzk5MTU4NjQy' target='_blank'>GIT Physiology By Dr. Ashish Sir</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDc5NDg0ODIzNTEzNTY5' target='_blank'>Respiratory Physiology Part - 1 By Ashish Sir</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDgwNDg2ODQ3ODY4NDk2' target='_blank'>Respiratory Physiology Part - 2 By Ashish Sir</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDgxNDg4ODcyMjIzNDIz' target='_blank'>Respiratory Physiology Part - 3 By Ashish Sir</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDgyNDkwODk2NTc4MzUw' target='_blank'>Respiratory Physiology Part - 4 By Ashish Sir</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDgzNDkyOTIwOTMzMjc3' target='_blank'>Cardiovascular Physiology Part - 1 By Ashish Sir</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDg0NDk0OTQ1Mjg4MjA0' target='_blank'>Cardiovascular Physiology Part - 2 By Ashish Sir</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDg1NDk2OTY5NjQzMTMx' target='_blank'>Cardiovascular Physiology Part - 3 By Ashish Sir</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDg2NDk4OTkzOTk4MDU4' target='_blank'>Cardiovascular Physiology Part - 4 By Ashish Sir</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDg3NTAxMDE4MzUyOTg1' target='_blank'>Cardiovascular Physiology Part - 5 By Ashish Sir</a></td></tr>											                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="botusername.js"></script>
+    <script>
+        // Assuming botusername.js sets a variable `botUsername`
+        // For example:
+        // var botUsername = "testingclonepavo_bot"; // without @
+
+        // Function to replace placeholders in all links
+        function replacePlaceholders() {
+            const links = document.querySelectorAll('a[data-href*="{{botUsername}}"]');
+            links.forEach(link => {
+                link.href = link.getAttribute('data-href').replace('{{botUsername}}', botUsername);
+            });
+        }
+
+        // Call the function to replace placeholders
+        replacePlaceholders();
+
+        // Table search function remains unchanged
+        function tableSearch() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("input-box");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

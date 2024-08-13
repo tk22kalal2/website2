@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Pulse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="subject.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="../index.html" class="back-link">
+            <i class="fa-solid fa-angle-left"></i> Back
+        </a>
+    </div>
+    <div class="content">
+        <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+                <thead>
+                    <tr>
+                        <th>LECTURE</th>
+                    </tr>
+                </thead>
+                <tbody>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE1OTM2MTk1MzQwNzU5MDA4' target='_blank'>MIST PHARMACOLOGY Dr. Saurabh Bhatiya PART 1</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE1OTM3MTk3MzY1MTEzOTM1' target='_blank'>MIST PHARMACOLOGY Dr. Saurabh Bhatiya PART 2</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE1OTM4MTk5Mzg5NDY4ODYy' target='_blank'>MIST PHARMACOLOGY Dr. Saurabh Bhatiya PART 3</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE1OTM5MjAxNDEzODIzNzg5' target='_blank'>MIST PHARMACOLOGY Dr. Saurabh Bhatiya PART 4</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE1OTQwMjAzNDM4MTc4NzE2' target='_blank'>MIST PHARMACOLOGY Dr. Saurabh Bhatiya PART 5</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE1OTQxMjA1NDYyNTMzNjQz' target='_blank'>MIST PHARMACOLOGY Dr. Saurabh Bhatiya PART 6</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE1OTQyMjA3NDg2ODg4NTcw' target='_blank'>MIST PHARMACOLOGY Dr. Saurabh Bhatiya PART 7</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE1OTQzMjA5NTExMjQzNDk3' target='_blank'>MIST PHARMACOLOGY Dr. Saurabh Bhatiya PART 8</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE1OTQ0MjExNTM1NTk4NDI0' target='_blank'>MIST PHARMACOLOGY Dr. Saurabh Bhatiya PART 9</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE1OTQ1MjEzNTU5OTUzMzUx' target='_blank'>MIST PHARMACOLOGY Dr. Saurabh Bhatiya PART 10</a></td></tr>											                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="botusername.js"></script>
+    <script>
+        // Assuming botusername.js sets a variable `botUsername`
+        // For example:
+        // var botUsername = "testingclonepavo_bot"; // without @
+
+        // Function to replace placeholders in all links
+        function replacePlaceholders() {
+            const links = document.querySelectorAll('a[data-href*="{{botUsername}}"]');
+            links.forEach(link => {
+                link.href = link.getAttribute('data-href').replace('{{botUsername}}', botUsername);
+            });
+        }
+
+        // Call the function to replace placeholders
+        replacePlaceholders();
+
+        // Table search function remains unchanged
+        function tableSearch() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("input-box");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

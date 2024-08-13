@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: relative;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.navbar i {
+    margin-right: 10px;
+}
+
+.content {
+    padding-top: 20px; /* Adjust padding-top to create space for the navbar */
+    text-align: center; /* Center the content horizontally */
+}
+
+.content-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 25px 0;
+    font-size: 0.9em;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.content-table td {
+    padding: 12px 15px;
+    color: #000; /* Black text color */
+    text-decoration: none; /* Remove underline */
+    text-align: left; /* Align text to the left */
+}
+
+.content-table td a {
+    color: #000; /* Black text color */
+    text-decoration: none; /* Remove underline */
+}
+
+#input-box {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Style for the search bar on focus */
+#input-box:focus {
+    outline: none;
+    border-color: #1E90FF; /* Change to your preferred focus color */
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.5); /* Change to your preferred box-shadow */
+}
+
+.back-link {
+    margin-right: 10px; /* Adjust spacing as needed */
+    color: inherit; /* Inherit color from parent or specify your own */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.back-link i {
+    font-size: 1.5em; /* Adjust size as needed */
+}
+
+@media (max-width: 600px) {
+    .content-table td {
+        padding: 8px 10px; /* Adjust padding for smaller screens */
+        color: #000; /* Black text color */
+        text-decoration: none; /* Remove underline */
+        text-align: left; /* Align text to the left */
+    }
+
+    .content-table td a {
+        color: #000; /* Black text color */
+        text-decoration: none; /* Remove underline */
+    }
+}

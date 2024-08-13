@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 100px auto;
+}
+
+.container {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+}
+
+.text-box {
+  padding: 20px 30px;
+  background: #f0faff;
+  position: relative;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.left-container {
+  left: 0;
+}
+
+.right-container {
+  left: 50%;
+}
+
+.container img {
+  position: absolute;
+  width: 7%;
+  border-radius: 50%;
+  right: -20px;
+  top: 32px;
+  z-index: 10;
+}
+.right-container img {
+  left: -20px;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #f0faff;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+}
+
+.text-box-small {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.left-container-arrow,
+.right-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+.left-container-arrow {
+  border-left: 15px solid #f0faff;
+  right: -15px;
+}
+
+.right-container-arrow {
+  border-right: 15px solid #f0faff;
+  left: -15px;
+}
+.telegram-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.telegram-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0088cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+
+      @keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(0, 136, 204, 0.5);
+	}
+	80% {
+		box-shadow: 0 0 0 14px rgba(0, 136, 204, 0);
+	}
+}
+
+.telegram-icon svg {
+  fill: #fff;
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline {
+    margin: 120px auto;
+  }
+  .timeline::after {
+    left: 34px;    
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 25px;
+  }
+  .container img {
+    top: 35px;
+    width: 10%;
+  }
+
+  .text-box {
+    font-size: 13px;
+  }
+
+  .text-box-small {
+    margin-bottom: 10px;
+  }
+
+  .right-container {
+    left: 0;
+  }
+
+  .left-container img, .right-container img {
+    left: 5px;
+  }
+
+  .left-container-arrow,
+  .right-container-arrow {
+    border-right: 15px solid #fff;
+    border-left: 0;
+    left: -15px;
+  }
+}

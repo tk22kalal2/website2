@@ -1,0 +1,27 @@
+/* button.css */
+
+/* Style for the button */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none; /* Disable text selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* Hover effect */
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Optional: Add more styles as needed */

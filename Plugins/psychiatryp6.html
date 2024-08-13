@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Links Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="subject.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="../index.html" class="back-link">
+            <i class="fa-solid fa-angle-left"></i> Back
+        </a>
+    </div>
+    <div class="content">
+        <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+                <thead>
+                    <tr>
+                        <th>LECTURE</th>
+                    </tr>
+                </thead>
+                <tbody>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE5NjA2NjEwNTUyODU2NjA5' target='_blank'>1. Basics of Psychiatry.mp4</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE5NjA3NjEyNTc3MjExNTM2' target='_blank'>2. Schizophrenia other Psychotic Disorders.mp4</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE5NjA4NjE0NjAxNTY2NDYz' target='_blank'>3. Mood DIsorder.mp4</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE5NjA5NjE2NjI1OTIxMzkw' target='_blank'>4. Neurotic Stress Related Somatoform Disorders.mp4</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE5NjEwNjE4NjUwMjc2MzE3' target='_blank'>5. Trauma and Stressor Related Disorders.mp4</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE5NjExNjIwNjc0NjMxMjQ0' target='_blank'>6.Dissocaitive_Disorders_Conversion_Disorder_Somatic_Symptoms_an.mp4</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE5NjEyNjIyNjk4OTg2MTcx' target='_blank'>7.Substance Use Addictive Disorders.mp4</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE5NjEzNjI0NzIzMzQxMDk4' target='_blank'>8.Child Psychiatry.mp4</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE5NjE0NjI2NzQ3Njk2MDI1' target='_blank'>9.Organic Mental Disorders.mp4</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE5NjE1NjI4NzcyMDUwOTUy' target='_blank'>10. Sleep Disorder.mp4</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE5NjE2NjMwNzk2NDA1ODc5' target='_blank'>11. Sexual Disorder.mp4</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE5NjE3NjMyODIwNzYwODA2' target='_blank'>12. Eating Disorders.mp4</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE5NjE4NjM0ODQ1MTE1NzMz' target='_blank'>13. Personality Disorders.mp4</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE5NjE5NjM2ODY5NDcwNjYw' target='_blank'>14. Forensic Psychiatry.mp4</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE5NjIwNjM4ODkzODI1NTg3' target='_blank'>15. Psychology.mp4</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE5NjIxNjQwOTE4MTgwNTE0' target='_blank'>16. Electro Convulsive Therapy(Miscellaneous Topics).mp4</a></td></tr>										                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="botusername.js"></script>
+    <script>
+        // Assuming botusername.js sets a variable `botUsername`
+        // For example:
+        // var botUsername = "testingclonepavo_bot"; // without @
+
+        // Function to replace placeholders in all links
+        function replacePlaceholders() {
+            const links = document.querySelectorAll('a[data-href*="{{botUsername}}"]');
+            links.forEach(link => {
+                link.href = link.getAttribute('data-href').replace('{{botUsername}}', botUsername);
+            });
+        }
+
+        // Call the function to replace placeholders
+        replacePlaceholders();
+
+        // Table search function remains unchanged
+        function tableSearch() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("input-box");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

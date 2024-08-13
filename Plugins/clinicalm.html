@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Pulse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="subject.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="../index.html" class="back-link">
+            <i class="fa-solid fa-angle-left"></i> Back
+        </a>
+    </div>
+    <div class="content">
+        <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+                <thead>
+                    <tr>
+                        <th>LECTURE</th>
+                    </tr>
+                </thead>
+                <tbody>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NDgwOTc3OTU3MTUyNTY' target='_blank'>Surgery recent updates - Bailey Chapters 1 to 5</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NDkwOTk4MjAwNzAxODM' target='_blank'>Surgery Recent updates - Nutriton</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NTAxMDE4NDQ0MjUxMTA' target='_blank'>Surgery Recent updates -Trauma</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NTExMDM4Njg3ODAwMzc' target='_blank'>Surgery Recent updates - Endocrine Surgery</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NTIxMDU4OTMxMzQ5NjQ' target='_blank'>Surgery Recent updates - Head and Neck section</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NTMxMDc5MTc0ODk4OTE' target='_blank'>Surgery Recent updates - GIT Part 1</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NTQxMDk5NDE4NDQ4MTg' target='_blank'>Surgery Recent updates - GIT Part 2</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NTUxMTE5NjYxOTk3NDU' target='_blank'>Surgery Recent updates - GIT Part 3</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NTYxMTM5OTA1NTQ2NzI' target='_blank'>Surgery Recent updates - Urology</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NTcxMTYwMTQ5MDk1OTk' target='_blank'>Surgery Recent updates - Transplant surgery</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NTgxMTgwMzkyNjQ1MjY' target='_blank'>Surgery Recent updates - Vascular surgery</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NTkxMjAwNjM2MTk0NTM' target='_blank'>Surgery Recent updates - Pediatrics surgery</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NjAxMjIwODc5NzQzODA' target='_blank'>Medicine Recent updates - 1</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NjExMjQxMTIzMjkzMDc' target='_blank'>Medicine Recent updates - 2</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NjIxMjYxMzY2ODQyMzQ' target='_blank'>OBGY Recent updates - 1</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NjMxMjgxNjEwMzkxNjE' target='_blank'>OBGY Recent updates - 2</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NjQxMzAxODUzOTQwODg' target='_blank'>Paediatrics Recent updates</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NjUxMzIyMDk3NDkwMTU' target='_blank'>Dermatology Recent updates</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NjYxMzQyMzQxMDM5NDI' target='_blank'>Community Medicine Recent updates -1</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NjcxMzYyNTg0NTg4Njk' target='_blank'>Community Medicine Recent updates -2</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTk5NjgxMzgyODI4MTM3OTY' target='_blank'>Pharmacology Recent updates</a></td></tr>										                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="botusername.js"></script>
+    <script>
+        // Assuming botusername.js sets a variable `botUsername`
+        // For example:
+        // var botUsername = "testingclonepavo_bot"; // without @
+
+        // Function to replace placeholders in all links
+        function replacePlaceholders() {
+            const links = document.querySelectorAll('a[data-href*="{{botUsername}}"]');
+            links.forEach(link => {
+                link.href = link.getAttribute('data-href').replace('{{botUsername}}', botUsername);
+            });
+        }
+
+        // Call the function to replace placeholders
+        replacePlaceholders();
+
+        // Table search function remains unchanged
+        function tableSearch() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("input-box");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

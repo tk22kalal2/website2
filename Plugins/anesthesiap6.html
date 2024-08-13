@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Links Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="subject.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="../index.html" class="back-link">
+            <i class="fa-solid fa-angle-left"></i> Back
+        </a>
+    </div>
+    <div class="content">
+        <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+                <thead>
+                    <tr>
+                        <th>LECTURE</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE4ODIwMDIxNDM0MjM4OTE0' target='_blank'>1 Introduction and PAC yw.mp4</a></td></tr>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE4ODIxMDIzNDU4NTkzODQx' target='_blank'>2 Local Anesthetics yw.mp4</a></td></tr>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE4ODIyMDI1NDgyOTQ4NzY4' target='_blank'>3_Regional,Spinal,Epidural_Anaesthesia_and_Central_Neuroaxial_Blockade.mp4</a></td></tr>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE4ODIzMDI3NTA3MzAzNjk1' target='_blank'>4 Nerve blocks yw.mp4</a></td></tr>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE4ODI0MDI5NTMxNjU4NjIy' target='_blank'>5 Intravenous agents yw.mp4</a></td></tr>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE4ODI1MDMxNTU2MDEzNTQ5' target='_blank'>6 Inhalation agents yw.mp4</a></td></tr>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE4ODI2MDMzNTgwMzY4NDc2' target='_blank'>7 Muscle relaxants yw.mp4</a></td></tr>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE4ODI3MDM1NjA0NzIzNDAz' target='_blank'>8 Anaesthesia for Coexisting Medical illness yw.mp4</a></td></tr>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE4ODI4MDM3NjI5MDc4MzMw' target='_blank'>9 Fluid managements yw.mp4</a></td></tr>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE4ODI5MDM5NjUzNDMzMjU3' target='_blank'>10 Monitoring during Anesthetisa yw.mp4</a></td></tr>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE4ODMwMDQxNjc3Nzg4MTg0' target='_blank'>11 CPCR yw.mp4</a></td></tr>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE4ODMxMDQzNzAyMTQzMTEx' target='_blank'>12 Anesthetisa machine yw.mp4</a></td></tr>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE4ODMyMDQ1NzI2NDk4MDM4' target='_blank'>13 Oxygen delivery device.mp4</a></td></tr>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE4ODMzMDQ3NzUwODUyOTY1' target='_blank'>14 Difficult airway management .mp4</a></td></tr>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE4ODM0MDQ5Nzc1MjA3ODky' target='_blank'>15 Ventilator yw.mp4</a></td></tr>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE4ODM1MDUxNzk5NTYyODE5' target='_blank'>16 Pain management yw.mp4</a></td></tr>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE4ODM2MDUzODIzOTE3NzQ2' target='_blank'>17 Brain death yw.mp4</a></td></tr>                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="botusername.js"></script>
+    <script>
+        // Assuming botusername.js sets a variable `botUsername`
+        // For example:
+        // var botUsername = "testingclonepavo_bot"; // without @
+
+        // Function to replace placeholders in all links
+        function replacePlaceholders() {
+            const links = document.querySelectorAll('a[data-href*="{{botUsername}}"]');
+            links.forEach(link => {
+                link.href = link.getAttribute('data-href').replace('{{botUsername}}', botUsername);
+            });
+        }
+
+        // Call the function to replace placeholders
+        replacePlaceholders();
+
+        // Table search function remains unchanged
+        function tableSearch() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("input-box");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

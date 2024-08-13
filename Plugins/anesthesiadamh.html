@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Links Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="subject.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="../index.html" class="back-link">
+            <i class="fa-solid fa-angle-left"></i> Back
+        </a>
+    </div>
+    <div class="content">
+        <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+                <thead>
+                    <tr>
+                        <th>LECTURE</th>
+                    </tr>
+                </thead>
+                <tbody>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTc2NDI3OTg0OTA1OTIz' target='_blank'>Anesthesia machine & breathing circuits atf.mp4</a></td></tr>									
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTc3NDMwMDA5MjYwODUw' target='_blank'>Cardio pulmonary resusitation atf.mp4</a></td></tr>									
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTc4NDMyMDMzNjE1Nzc3' target='_blank'>Complications in anesthesia atf.mp4</a></td></tr>									
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTc5NDM0MDU3OTcwNzA0' target='_blank'>1 Thiopentone and ketamine atf.mp4</a></td></tr>									
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTgwNDM2MDgyMzI1NjMx' target='_blank'>2 Propofol & etomidate atf.mp4</a></td></tr>									
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTgxNDM4MTA2NjgwNTU4' target='_blank'>1 Inhaled agents basics atf.mp4</a></td></tr>									
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTgyNDQwMTMxMDM1NDg1' target='_blank'>2 Inhaled ganets detailled atf.mp4</a></td></tr>									
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTgzNDQyMTU1MzkwNDEy' target='_blank'>Local anesthetic pharmacology atf.mp4</a></td></tr>									
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTg0NDQ0MTc5NzQ1MzM5' target='_blank'>Miscellaneous atf.mp4</a></td></tr>									
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTg1NDQ2MjA0MTAwMjY2' target='_blank'>Monitoring atf.mp4</a></td></tr>									
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTg2NDQ4MjI4NDU1MTkz' target='_blank'>1 Scoline atf.mp4</a></td></tr>									
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTg3NDUwMjUyODEwMTIw' target='_blank'>2 Ndmr & reversal agents atf.mp4</a></td></tr>									
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTg4NDUyMjc3MTY1MDQ3' target='_blank'>3 Neuromuscular monitoring atf.mp4</a></td></tr>									
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTg5NDU0MzAxNTE5OTc0' target='_blank'>1 Preoperative assessment atf.mp4</a></td></tr>									
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTkwNDU2MzI1ODc0OTAx' target='_blank'>2 Airway management atf.mp4</a></td></tr>									
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTkxNDU4MzUwMjI5ODI4' target='_blank'>3 Preoperative preparation atf.mp4</a></td></tr>									
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTkyNDYwMzc0NTg0NzU1' target='_blank'>Introduction to Anesthesia atf.mp4</a></td></tr>									
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTkzNDYyMzk4OTM5Njgy' target='_blank'>1 Central neuraxial block atf.mp4</a></td></tr>									
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEzNTk0NDY0NDIzMjk0NjA5' target='_blank'>2 Peripheral nerve blocks atf.mp4</a></td></tr>									                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="botusername.js"></script>
+    <script>
+        // Assuming botusername.js sets a variable `botUsername`
+        // For example:
+        // var botUsername = "testingclonepavo_bot"; // without @
+
+        // Function to replace placeholders in all links
+        function replacePlaceholders() {
+            const links = document.querySelectorAll('a[data-href*="{{botUsername}}"]');
+            links.forEach(link => {
+                link.href = link.getAttribute('data-href').replace('{{botUsername}}', botUsername);
+            });
+        }
+
+        // Call the function to replace placeholders
+        replacePlaceholders();
+
+        // Table search function remains unchanged
+        function tableSearch() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("input-box");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

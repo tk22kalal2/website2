@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Pulse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="subject.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="../index.html" class="back-link">
+            <i class="fa-solid fa-angle-left"></i> Back
+        </a>
+    </div>
+    <div class="content">
+        <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+                <thead>
+                    <tr>
+                        <th>LECTURE</th>
+                    </tr>
+                </thead>
+                <tbody>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzc3NzczOTYxNTk0ODEy' target='_blank'>1. Basics of Radiology Part-1</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzc4Nzc1OTg1OTQ5NzM5' target='_blank'>2. Basics of Radiology Part-2</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzc5Nzc4MDEwMzA0NjY2' target='_blank'>3. Basics of MRi</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzgwNzgwMDM0NjU5NTkz' target='_blank'>4. Intervetional Radiology</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzgxNzgyMDU5MDE0NTIw' target='_blank'>5. Radiation Units, Protectionn, Dose Limits and Hazards</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzgyNzg0MDgzMzY5NDQ3' target='_blank'>6. Contrast Media</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzgzNzg2MTA3NzI0Mzc0' target='_blank'>1. Respiratory Radiology</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzg0Nzg4MTMyMDc5MzAx' target='_blank'>2. CVS Radiology</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzg1NzkwMTU2NDM0MjI4' target='_blank'>1. Neuroradiology Part-1</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzg2NzkyMTgwNzg5MTU1' target='_blank'>2. Neuroradiology Part-2</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzg3Nzk0MjA1MTQ0MDgy' target='_blank'>3. Head and Neck Radiology</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzg4Nzk2MjI5NDk5MDA5' target='_blank'>1. GIT</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzg5Nzk4MjUzODUzOTM2' target='_blank'>1. Hepatobiliary and Pancreatic Radiology</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzkwODAwMjc4MjA4ODYz' target='_blank'>1. Genitourinary Radiology</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzkxODAyMzAyNTYzNzkw' target='_blank'>1. OBGy Imaging</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzkyODA0MzI2OTE4NzE3' target='_blank'>2. Breast Imaging</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzkzODA2MzUxMjczNjQ0' target='_blank'>1. MSK</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzk0ODA4Mzc1NjI4NTcx' target='_blank'>1. nuclear Medicine</a></td></tr>										
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTEwNzk1ODEwMzk5OTgzNDk4' target='_blank'>1. Radiotherapy</a></td></tr>										                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="botusername.js"></script>
+    <script>
+        // Assuming botusername.js sets a variable `botUsername`
+        // For example:
+        // var botUsername = "testingclonepavo_bot"; // without @
+
+        // Function to replace placeholders in all links
+        function replacePlaceholders() {
+            const links = document.querySelectorAll('a[data-href*="{{botUsername}}"]');
+            links.forEach(link => {
+                link.href = link.getAttribute('data-href').replace('{{botUsername}}', botUsername);
+            });
+        }
+
+        // Call the function to replace placeholders
+        replacePlaceholders();
+
+        // Table search function remains unchanged
+        function tableSearch() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("input-box");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

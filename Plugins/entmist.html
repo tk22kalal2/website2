@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Pulse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="subject.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="../index.html" class="back-link">
+            <i class="fa-solid fa-angle-left"></i> Back
+        </a>
+    </div>
+    <div class="content">
+        <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+                <thead>
+                    <tr>
+                        <th>LECTURE</th>
+                    </tr>
+                </thead>
+                <tbody>
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDA3MzM5MDY5OTU4ODI1' target='_blank'>MIST ENT PART 1 Dr. Rajiv Dhawan</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDA4MzQxMDk0MzEzNzUy' target='_blank'>MIST ENT PART 2 Dr. Rajiv Dhawan</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDA5MzQzMTE4NjY4Njc5' target='_blank'>MIST ENT PART 3 Dr. Rajiv Dhawan</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDEwMzQ1MTQzMDIzNjA2' target='_blank'>MIST ENT PART 4 Dr. Rajiv Dhawan</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDExMzQ3MTY3Mzc4NTMz' target='_blank'>MIST ENT PART 5 Dr. Rajiv Dhawan</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDEyMzQ5MTkxNzMzNDYw' target='_blank'>MIST ENT PART 6 Dr. Rajiv Dhawan</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDEzMzUxMjE2MDg4Mzg3' target='_blank'>MIST ENT PART 7 Dr. Rajiv Dhawan</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDE0MzUzMjQwNDQzMzE0' target='_blank'>MIST ENT PART 8 Dr. Rajiv Dhawan</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDE1MzU1MjY0Nzk4MjQx' target='_blank'>MIST ENT PART 9 Dr. Rajiv Dhawan</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDE2MzU3Mjg5MTUzMTY4' target='_blank'>MIST ENT PART 10 Dr. Rajiv Dhawan</a></td></tr>											
+<tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTE2MDE3MzU5MzEzNTA4MDk1' target='_blank'>MIST ENT PART 11 Dr. Rajiv Dhawan</a></td></tr>											                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="botusername.js"></script>
+    <script>
+        // Assuming botusername.js sets a variable `botUsername`
+        // For example:
+        // var botUsername = "testingclonepavo_bot"; // without @
+
+        // Function to replace placeholders in all links
+        function replacePlaceholders() {
+            const links = document.querySelectorAll('a[data-href*="{{botUsername}}"]');
+            links.forEach(link => {
+                link.href = link.getAttribute('data-href').replace('{{botUsername}}', botUsername);
+            });
+        }
+
+        // Call the function to replace placeholders
+        replacePlaceholders();
+
+        // Table search function remains unchanged
+        function tableSearch() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("input-box");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
