@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const htmlFiles = [
         { file: "Plugins/anesthesiap.html", fileName: "ANESTHESIA", platformName: "PREPLADDER-5" },
         { file: "Plugins/dermatologyp.html", fileName: "DERMATOLOGY", platformName: "CEREBELLUM" },
-        { file: "Plugins/anatomyp.html", fileName: "ANATOMY", platformName: "ANATOMY" }
+        { file: "Plugins/anatomyp.html", fileName: "ANATOMY", platformName: "PLATFORM_X" }
+        // Add other files as needed
     ];
 
     // Fetch all HTML files and process them
@@ -62,9 +63,12 @@ function extractKeywordsAndUrls(html) {
 
     // Extract keywords and corresponding URLs from the anchor elements
     const keywordsAndUrls = Array.from(anchorElements).map(anchor => {
+        const rawHref = anchor.getAttribute("data-href");
+        const url = rawHref.replace('{{botUsername}}', 'testingclonepavo_bot'); // Replace botUsername
+
         return {
             keyword: anchor.textContent.toLowerCase(),
-            url: anchor.getAttribute("href")
+            url: url
         };
     });
 
