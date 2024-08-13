@@ -100,14 +100,24 @@ function displaySuggestions(suggestions) {
         infoIcon.className = "fa-solid fa-circle-info info-icon"; // Use the solid icon class
         infoIcon.style.marginLeft = "10px";
         infoIcon.style.cursor = "pointer";
+        infoIcon.style.position = "relative";
 
-        // Add click event to show fileName and platformName
-        infoIcon.addEventListener("click", function (event) {
-            event.stopPropagation(); // Prevent the list item click event
+        // Create the popup container
+        const popup = document.createElement("div");
+        popup.className = "info-popup";
+        popup.innerHTML = `<strong>File Name:</strong> ${entry.fileName}<br><strong>Platform Name:</strong> ${entry.platformName}`;
+        popup.style.display = "none";
 
-            alert(`File Name: ${entry.fileName}\nPlatform Name: ${entry.platformName}`);
+        // Add mouseover and mouseout events to toggle popup
+        infoIcon.addEventListener("mouseover", function () {
+            popup.style.display = "block";
         });
 
+        infoIcon.addEventListener("mouseout", function () {
+            popup.style.display = "none";
+        });
+
+        infoIcon.appendChild(popup);
         listItem.appendChild(infoIcon);
         suggestionList.appendChild(listItem);
     });
