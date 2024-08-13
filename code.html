@@ -1,0 +1,31 @@
+
+function doGet() {
+  return HtmlService.createHtmlOutputFromFile('index').setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+}
+
+
+function submitForm(formObject) {
+  var sheet = SpreadsheetApp.openById('YOUR_SPREADSHEET_ID').getSheetByName('Sheet1'); // Update with your actual spreadsheet ID and sheet name
+  var newRow = sheet.getLastRow() + 1;
+  var rowData = [];
+  for (var field in formObject) {
+    rowData.push(formObject[field]);
+  }
+  sheet.getRange(newRow, 1, 1, rowData.length).setValues([rowData]);
+}
+
+// Code.gs (Google Apps Script)
+
+function submitForm(email, otp) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var newRow = [email, otp];
+  sheet.appendRow(newRow);
+  sendEmail(email, otp);
+  return true; // Indicate success
+}
+
+function sendEmail(email, otp) {
+  var subject = "Your OTP for registration";
+  var message = "Your OTP is: " + otp;
+  MailApp.sendEmail(email, subject, message);
+}

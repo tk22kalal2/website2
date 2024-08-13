@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+  
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4119/1.+Basics+of+Psychiatry+atf.mp4?hash=AgADWQ' target='_blank'> 1. Basics of Psychiatry atf.mp4 </a></td></tr>									
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4120/2.+Schizophrenia+Spectrum+and+Other+Psychotic+Disorders+atf.mp4?hash=AgADXA' target='_blank'> 2. Schizophrenia Spectrum and Other Psychotic Disorders atf.mp4 </a></td></tr>									
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4121/3.+Mood+Disorders+atf.mp4?hash=AgADXQ' target='_blank'> 3. Mood Disorders atf.mp4 </a></td></tr>									
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4122/5.+Substance+Related+and+Addictive+Disorders+atf.mp4?hash=AgADXw' target='_blank'> 5. Substance Related and Addictive Disorders atf.mp4 </a></td></tr>									
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4123/4.+Neurotic%2C+Stress+Related+and+Somatoform+Disorders+atf.mp4?hash=AgADXg' target='_blank'> 4. Neurotic, Stress Related and Somatoform Disorders atf.mp4 </a></td></tr>									
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4124/7.+Personality+Disorders+atf.mp4?hash=AgADYQ' target='_blank'> 7. Personality Disorders atf.mp4 </a></td></tr>									
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4125/8.+Eating+Disorders+atf.mp4?hash=AgADYg' target='_blank'> 8. Eating Disorders atf.mp4 </a></td></tr>									
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4126/9.+Sleep+Disorders+atf.mp4?hash=AgADYw' target='_blank'> 9. Sleep Disorders atf.mp4 </a></td></tr>									
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4127/10.+Sexual+Disorders+atf.mp4?hash=AgADZA' target='_blank'> 10. Sexual Disorders atf.mp4 </a></td></tr>									
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4128/11.+Child+Psychiatry+atf.mp4?hash=AgADZQ' target='_blank'> 11. Child Psychiatry atf.mp4 </a></td></tr>									
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4129/12.+Psychoanalysis+atf.mp4?hash=AgADZg' target='_blank'> 12. Psychoanalysis atf.mp4 </a></td></tr>									
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4130/13.+Miscellaneous+atf.mp4?hash=AgADZw' target='_blank'> 13. Miscellaneous atf.mp4 </a></td></tr>									
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4131/27.+Mental+Health+Care+Act+2017+atf.mp4?hash=AgADdg' target='_blank'> 27. Mental Health Care Act 2017 atf.mp4 </a></td></tr>									
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

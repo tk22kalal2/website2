@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        /* Resetting default margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling container */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Align items at the top */
+            height: 100vh;
+            padding: 20px;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text color */
+        }
+
+        /* Styling left column */
+        .left-column {
+            flex: 1;
+            padding-right: 20px; /* Add some space to separate from the form */
+        }
+
+        /* Styling main heading */
+        .main-heading {
+            margin-top: 60px;
+            margin-bottom: 20px; /* Add some space below */
+            font-size: 36px; /* Increase size */
+        }
+
+        /* Styling quote */
+        .quote {
+            font-style: italic;
+            margin-bottom: 20px; /* Add some space below */
+            color: #aaa; /* Adjusted quote color */
+        }
+
+        /* Styling right column */
+        .right-column {
+            margin-top: 80px;
+            flex: 1;
+            padding-left: 20px; /* Add some space to separate from the form */
+        }
+
+        /* Styling form */
+        form {
+            margin-top: 80px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #333; /* Darker form background */
+        }
+
+        /* Styling form controls */
+        .form-control {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #555; /* Darker input background */
+            color: #fff; /* White text color */
+        }
+
+        button {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styling for the image */
+        .portfolio-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <script>
+       function generateOTP() {
+           return Math.floor(10000 + Math.random() * 90000); // Generate random 5-digit OTP
+       }
+
+
+       function submitForm() {
+           var email = document.getElementById("email").value;
+         
+           var otp = generateOTP(); // Generate OTP
+
+
+           // Call Google Apps Script function to handle form submission
+           google.script.run.withSuccessHandler(function (success) {
+               if (success) {
+                   var enteredOTP = prompt("Enter OTP sent to your email:");
+                   if (enteredOTP == otp) {
+                       alert("OTP verification successful! Redirecting to login page...");
+                       window.location.href = "https://test--soft-truffle-b57ed7.netlify.app/index2.html"; // Redirect to login page
+                   } else {
+                       alert("Incorrect OTP. Registration failed.");
+                   }
+               } else {
+                   alert("Error submitting form.");
+               }
+           }).submitForm(email, otp); // Submit form with OTP
+       }
+     </script>
+
+</head>
+<body>
+    <div class="container">
+        <!-- Left column: Main Heading and Quote -->
+        <div class="left-column">
+            <!-- Main Heading -->
+            <div class="main-heading">
+                <h1>NEXTPULSE FREE EDUCATION</h1>
+            </div>
+
+            <!-- Quote -->
+            <div class="quote">
+                <p>➣"SUCCESS IS WHEN YOUR SIGNATURE CHANGES TO AUTOGRAPH"<br>➣"IF YOU WANT TO SHINE LIKE A SUN, FIRST BURN LIKE A SUN.<br>➣"WINNERS ARE NOT THOSE WHO NEVER FAIL BUT THOES WHO NEVER QUIT"<br>➣"A DREAM IS NOT THAT WHICH YOU SEE WHILE SLEEPING, IT IS SOMETHING THAT DOES NOT LET YOU SLEEP"</p>
+            </div>
+        </div>
+
+        <!-- Right column: Registration Form -->
+        <div class="right-column">
+            <form id="registrationForm">
+                <!-- Form Fields -->
+                <div class="form-control">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="button" onclick="submitForm()">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript functions here
+    </script>
+</body>
+</html>

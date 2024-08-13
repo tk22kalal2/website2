@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.40));
+    background-position: center;
+    background-size: center;
+}
+
+    
+.banner video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+ 
+.telegram-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.telegram-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0088cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+
+      @keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(0, 136, 204, 0.5);
+	}
+	80% {
+		box-shadow: 0 0 0 14px rgba(0, 136, 204, 0);
+	}
+}
+
+.telegram-icon svg {
+  fill: #fff;
+  width: 30px;
+  height: 30px;
+}
+ 
+
+@media(min-aspect-ratio: 16/9){
+    .banner video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        margin: 10px 80px;
+	overflow-y: auto;
+	max-height: 200px;
+    }
+    .content{
+	    top: 40%;
+	    position: relative;
+	    overflow-y: auto;
+    }
+
+    .banner video {
+        width: auto;
+        height: 800px;
+
+    }
+}

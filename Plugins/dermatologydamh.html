@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+  
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7843/3.Appendageal+disorders+atf.mp4?hash=AgADfh' target='_blank'> 3.Appendageal disorders atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7844/1.Basics+of+Skin+atf.mp4?hash=AgADfx' target='_blank'> 1.Basics of Skin atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7845/8.Disorders+of+Keratinization+and+Genodermatosis+atf.mp4?hash=AgADgB' target='_blank'> 8.Disorders of Keratinization and Genodermatosis atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7846/2.Hair+and+Disorders+atf.mp4?hash=AgADgR' target='_blank'> 2.Hair and Disorders atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7847/1.Bacterial+Infections+atf.mp4?hash=AgADgh' target='_blank'> 1.Bacterial Infections atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7848/2.Fungal+Infections+atf.mp4?hash=AgADgx' target='_blank'> 2.Fungal Infections atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7849/3.Mycobacterial+Infection+atf.mp4?hash=AgADhB' target='_blank'> 3.Mycobacterial Infection atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7850/4.Protozoal+and+Parasitic+Infection+atf.mp4?hash=AgADhR' target='_blank'> 4.Protozoal and Parasitic Infection atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7851/5.Viral+Infection+atf.mp4?hash=AgADhh' target='_blank'> 5.Viral Infection atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7852/15.1.Drug+Reactions+atf.mp4?hash=AgADhx' target='_blank'> 15.1.Drug Reactions atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7853/9.1.Nutritional+deficiency+atf.mp4?hash=AgADiB' target='_blank'> 9.1.Nutritional deficiency atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7854/1.+Psoriasis+atf.mp4?hash=AgADiR' target='_blank'> 1. Psoriasis atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7855/2.Lichen+planus+atf.mp4?hash=AgADih' target='_blank'> 2.Lichen planus atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7856/3.+Miscellaneous+atf.mp4?hash=AgADix' target='_blank'> 3. Miscellaneous atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7857/5.4+MCQ+Papulosqamous+disorders+atf.mp4?hash=AgADjR' target='_blank'> 5.4 MCQ Papulosqamous disorders atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7858/Pigmentary+Disorders+atf.mp4?hash=AgADjh' target='_blank'> Pigmentary Disorders atf.mp4 </a></td></tr>							
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7859/1.STD+atf.mp4?hash=AgADkB' target='_blank'> 1.STD atf.mp4 </a></td></tr>							
+</table>
+<script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

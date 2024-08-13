@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+  
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8313/MIST+ANATOMY+1.mp4?hash=AgADEg' target='_blank'> ANATOMY PART 1 MIST Dr. Shilpa Agarwal </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8314/MIST+ANATOMY+2.mp4?hash=AgADFQ' target='_blank'> ANATOMY MIST PART 2 Dr. Shilpa Agarwal </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8315/MIST+ANATOMY+3.mp4?hash=AgADFw' target='_blank'> ANATOMY MIST PART 3 Dr. Shilpa Agarwal </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8316/MIST+ANATOMY+4.mp4?hash=AgADGw' target='_blank'> ANATOMY MIST PART 4 Dr. Shilpa Agarwal </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8317/MIST+ANATOMY+5.mp4?hash=AgADHg' target='_blank'> ANATOMY MIST PART 5 Dr. Shilpa Agarwal </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8318/MIST+ANATOMY+6.mp4?hash=AgADIg' target='_blank'> ANATOMY MIST PART 6 Dr. Shilpa Agarwal </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8319/MIST+ANATOMY+7.mp4?hash=AgADIw' target='_blank'> ANATOMY MIST PART 7 Dr. Shilpa Agarwal </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8320/MIST+ANATOMY+8.mp4?hash=AgADJg' target='_blank'> ANATOMY MIST PART 7 Dr. Shilpa Agarwal </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8321/MIST+ANATOMY+9.mp4?hash=AgADKg' target='_blank'> ANATOMY MIST PART 8 Dr. Shilpa Agarwal </a></td></tr>	
+<tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/8322/MIST+ANATOMY+10.mp4?hash=AgAD_Q' target='_blank'> ANATOMY MIST PART 9 Dr. Shilpa Agarwal </a></td></tr>	
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>
