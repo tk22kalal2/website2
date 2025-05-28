@@ -1,2 +1,2 @@
 // Example content of botusername.js
-var botUsername = "testingclonepavo_bot"; // without @
+var botUsername = "mynextpulseX_bot"; // without @
