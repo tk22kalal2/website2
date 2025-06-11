@@ -1,0 +1,30 @@
+# Allow Google AdSense crawler
+User-agent: Mediapartners-Google
+Disallow:
+
+# Allow Google Display Ads bot
+User-agent: Google-Display-Ads-Bot
+Disallow:
+
+# Allow all major Google crawlers
+User-agent: Googlebot
+Disallow:
+
+User-agent: Googlebot-Image
+Disallow:
+
+User-agent: Googlebot-Mobile
+Disallow:
+
+User-agent: AdsBot-Google
+Disallow:
+
+User-agent: AdsBot-Google-Mobile
+Disallow:
+
+# Block all other bots (optional - helps reduce spammy bots)
+User-agent: *
+Disallow: /
+
+# Sitemap location (important for Search Console)
+Sitemap: https://afrahtafreeh.site/sitemap.xml
